@@ -1,0 +1,14 @@
+class Solution {
+    public int vowelStrings(String[] words, int left, int right) {
+        // String vowel="aeiouAEIOU";
+        String vowel="aeiou";
+
+        int count=0;
+
+        for(int i=left;i<=right;i++){
+            if(vowel.contains(String.valueOf(words[i].charAt(0))) && vowel.contains(String.valueOf(words[i].charAt(words[i].length()-1)))) count++;
+        }
+
+        return count;
+    }
+}
